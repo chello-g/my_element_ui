@@ -26,3 +26,10 @@ Vue.component('MyElHeader',ElHeader);
 Vue.component('MyElMain',ElMain);
 Vue.component('MyElFooter',ElFooter);
 ```
+3. 安装ElementUI的样式库
+```js
+// 安装
+cnpm i element-theme-chalk -S
+// 在main.js中引入
+import 'element-theme-chalk';
+```

@@ -1,12 +1,15 @@
 <template>
   <div class="hello">
-    <!-- Container -->
+    <!-- 1. Container -->
     <h1>1. Container</h1>
-    <my-el-container >
-      <my-el-header slot="slotcontainer">Header</my-el-header>
-      <my-el-main slot="slotcontainer">Main</my-el-main>
-      <my-el-footer slot="slotcontainer">Footer</my-el-footer>
-    </my-el-container>
+    <el-container >
+      <el-header slot="slotcontainer">Header</el-header>
+      <el-main slot="slotcontainer">Main</el-main>
+      <el-footer slot="slotcontainer">Footer</el-footer>
+    </el-container>
+    <!-- 2. Button -->
+    <h1>2. Button</h1>
+    <el-button>默认按钮</el-button>
   </div>
 </template>
 
@@ -49,5 +52,14 @@ export default {
   
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
+  }
+  .custom-icon-wrap{
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .el-icon-edit{
+    width:20px;
+    height:20px;
+    font-size: 12px;
   }
 </style>

@@ -15,7 +15,7 @@
     },
     computed: {
       isVertical() {
-        // <my-el-container direction='vertical'>标签上显式添加direction='vertical'就会走这个if else，不显示写this.direction值都为null
+        // <el-container direction='vertical'>标签上显式添加direction='vertical'就会走这个if else，不显示写this.direction值都为null
         if (this.direction === 'vertical') {
           return true;
         } else if (this.direction === 'horizontal') {
@@ -24,12 +24,15 @@
 
         // isVertical的值：子元素中有 el-header 或 el-footer 时为 vertical，否则为 horizontal
         console.log('this.$slots',this.$slots)
-        return this.$slots && this.$slots.default
-          ? this.$slots.default.some(vnode => {
+        // let flag =  this.$slots && this.$slots.default
+        // slot没有name，默认是this.$slots.default；有name,如<slot name="slotcontainer"></slot>，则是this.$slots.slotcontainer
+        let flag =  this.$slots && this.$slots.slotcontainer
+          ? this.$slots.slotcontainer.some(vnode => {
             const tag = vnode.componentOptions && vnode.componentOptions.tag;
-            return tag === 'my-el-header' || tag === 'my-el-footer';
+            return tag === 'el-header' || tag === 'el-footer';
           })
           : false;
+        return flag
       }
     },
   };
