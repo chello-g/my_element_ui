@@ -5,6 +5,7 @@ import ElHeader from './components/header'
 import ElMain from './components/main'
 import ElFooter from './components/footer'
 import ELButton from './components/button'
+import ELLink from './components/link'
 import 'element-theme-chalk';
 import App from './App.vue'
 
@@ -15,6 +16,7 @@ Vue.component(ElHeader.name,ElHeader);
 Vue.component(ElMain.name,ElMain);
 Vue.component(ElFooter.name,ElFooter);
 Vue.component(ELButton.name,ELButton);
+Vue.component(ELLink.name,ELLink);
 
 
 new Vue({

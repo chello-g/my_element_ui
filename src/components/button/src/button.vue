@@ -74,7 +74,7 @@
         // 因为 no-prototype-builtins 规则不允许Object.prototype直接从对象调用方法，所以会导致这种错误
         // return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.elForm || {}).disabled;
         // 解决：可以通过使用call()函数来调用
-        console.log('this.$options',this.$options)
+        // console.log('this.$options',this.$options)
         return Object.prototype.hasOwnProperty.call(this.$options.propsData, 'disabled') ? this.disabled : (this.elForm || {}).disabled;
         // $options: Vue提供的，propsData其实就是props中的数据，使用$options取值的时候使用$options.propsData取值
         // 用于当前 Vue 实例的初始化选项。需要在选项中包含自定义 property 时会有用处：
