@@ -10,6 +10,10 @@
     <!-- 2. Button -->
     <h1>2. Button</h1>
     <el-button>默认按钮</el-button>
+    <!-- 既可以写成plain也可以写成:plain="true" -->
+    <el-button plain>朴素按钮1</el-button>
+    <el-button :plain="true">朴素按钮2</el-button>
+    <el-button type="primary" loading>加载中</el-button>
   </div>
 </template>
 

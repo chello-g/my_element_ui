@@ -21,12 +21,12 @@ import ElHeader from './components/header'
 import ElMain from './components/main'
 import ElFooter from './components/footer'
 // 全局注册组件
-Vue.component('MyElContainer',ElContainer);
-Vue.component('MyElHeader',ElHeader);
-Vue.component('MyElMain',ElMain);
-Vue.component('MyElFooter',ElFooter);
+Vue.component(ElContainer.name,ElContainer);
+Vue.component(ElHeader.name,ElHeader);
+Vue.component(ElMain.name,ElMain);
+Vue.component(ElFooter.name,ElFooter);
 ```
-3. 安装ElementUI的样式库
+## 3. 安装ElementUI的样式库
 ```js
 // 安装
 cnpm i element-theme-chalk -S
