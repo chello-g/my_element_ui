@@ -38,6 +38,55 @@
       <el-radio :label="4">备选项4</el-radio>
       <el-radio :label="5">备选项5</el-radio>
     </el-radio-group>
+
+    <!-- 5. Input -->
+    <h1>5. Input 输入框</h1>
+    <!-- placeholder占位符是原生<input>标签的属性 -->
+    <el-input v-model="input" placeholder="普通"></el-input>
+    <el-input v-model="input1" placeholder="禁用状态" disabled></el-input>
+    <!-- v-model="input2"相当于： -->
+    <el-input
+      :value="input2"
+      @input="inputFn"
+      placeholder="可清空"
+      clearable
+      show-password
+    ></el-input>
+    <el-input
+      type="textarea"
+      :autosize="{ minRows: 2, maxRows: 4 }"
+      placeholder="请输入内容"
+      v-model="textarea2"
+    >
+    </el-input>
+    <el-input
+      type="text"
+      placeholder="请输入内容"
+      v-model="text"
+      maxlength="5"
+      show-word-limit
+    >
+    </el-input>
+
+    <!-- 6. Select -->
+    <h1>6. Select 选择器</h1>
+
+    <!-- 7. Form -->
+    <!-- <h1>7. Form 表单</h1>
+    <el-form :inline="true" :model="formInline" class="demo-form-inline">
+      <el-form-item label="审批人">
+        <el-input v-model="formInline.user" placeholder="审批人"></el-input>
+      </el-form-item>
+      <el-form-item label="活动区域">
+        <el-select v-model="formInline.region" placeholder="活动区域">
+          <el-option label="区域一" value="shanghai"></el-option>
+          <el-option label="区域二" value="beijing"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">查询</el-button>
+      </el-form-item>
+    </el-form> -->
   </div>
 </template>
 
@@ -48,16 +97,32 @@ export default {
     return {
       radio: "1",
       radioGroup: 0,
+      input: "",
+      input1: "",
+      input2: "",
+      formInline: {
+        user: "",
+        region: "",
+      },
+      textarea2: "",
+      text:"12345"
     };
   },
-  methods:{
+  methods: {
     groupHandleChange(value) {
-      console.log('groupHandleChange--value',value)
+      console.log("groupHandleChange--value", value);
     },
     singleHansleChange0(value) {
-      console.log('singleHansleChange0--value',value)
-    }
-  }
+      console.log("singleHansleChange0--value", value);
+    },
+    inputFn(val) {
+      this.input2 = val;
+      console.log("inputFn-val", val);
+    },
+    onSubmit() {
+      console.log("submit!");
+    },
+  },
 };
 </script>
 
