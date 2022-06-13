@@ -10,6 +10,9 @@ import ELRadio from './components/radio'
 import ELRadioButton from './components/radio-button'
 import ELRadioGroup from './components/radio-group'
 import ElInput from './components/input'
+import ElSelect from './components/select'
+import ElOption from './components/option'
+import ElOptionGroup from './components/option-group'
 import ElForm from './components/form'
 import ElFormItem from './components/form-item'
 import 'element-theme-chalk';
@@ -27,6 +30,9 @@ Vue.component(ELRadio.name,ELRadio);
 Vue.component(ELRadioButton.name,ELRadioButton);
 Vue.component(ELRadioGroup.name,ELRadioGroup);
 Vue.component(ElInput.name,ElInput);
+Vue.component(ElSelect.name,ElSelect);
+Vue.component(ElOption.name,ElOption);
+Vue.component(ElOptionGroup.name,ElOptionGroup);
 Vue.component(ElForm.name,ElForm);
 Vue.component(ElFormItem.name,ElFormItem);
 
